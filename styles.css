@@ -14,6 +14,7 @@ body {
 /* Container */
 .container {
     padding: 10px 10%;
+    scrollbar-width: none;
 }
 
 /* Navigation Bar */
@@ -71,8 +72,9 @@ nav ul li a:hover::after {
     margin-top: 20px;
 }
 
-.header-text h1 span {
+.header-text span {
     color: #ff004f;
+    font-weight: bold;
 }
 
 /* About Section */
@@ -113,8 +115,19 @@ nav ul li a:hover::after {
     flex: 1;
 }
 
+.about-col-2 .sub-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #ff0050;
+}
+.about-col-2 p {
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 20%;
+}
+
 /* Tabs */
-.tabs {
+.tabs-about {
     display: flex;
     justify-content: center;
     gap: 50px;
@@ -257,4 +270,253 @@ nav ul li a:hover::after {
     background: #e60045;
     box-shadow: 0px 0px 15px rgba(255, 0, 79, 0.8);
     transform: scale(1.05);
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Darker background */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background: #1a1a1a; /* Dark black background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    max-width: 80%;
+    text-align: center;
+    box-shadow: 0px 8px 20px rgba(255, 0, 0, 0.6); /* Red shadow effect */
+    position: relative;
+    overflow: hidden;
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+    color: white; /* White text */
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Tabs Styling */
+.tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #444;
+    padding-bottom: 5px;
+    flex-wrap: wrap;
+    overflow-x: auto;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    padding: 10px 15px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.tab-button:hover {
+    color: #ff4d4d;
+    transform: scale(1.1);
+}
+
+.tab-button.active {
+    border-bottom: 3px solid #ff0000;
+    font-weight: bold;
+    color: #ff4d4d;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    max-height: 60vh;
+    padding: 15px;
+    overflow-y: auto;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* List and Ratings */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 18px;
+    margin: 10px 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Ratings */
+.rating {
+    color: gold;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+    }
+    
+    .tab-button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    li {
+        font-size: 16px;
+    }
+}
+
+
+.text-container {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;    
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+}
+
+/* Skills Section */
+#skills {
+    padding: 50px 10%;
+    background: #3b3838;
+    color: white;
+    text-align: left;
+    scrollbar-width: none;
+}
+
+#skills h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff004f;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    font-size: 18px;
+    margin-bottom: 10px; 
+    line-height: 1.6; 
+    color: #ddd;
+}
+
+.skills-list li strong {
+    color: #ff004f;
+    white-space: nowrap;  
+    text-overflow: ellipsis;
+}
+
+
+/* Cursor Blinking Effect */
+.cursor {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.internship-container {
+    background: #222; /* Dark background */
+    color: #fff; /* Light text */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.internship-title {
+    color: #ff4081; /* Pinkish Highlight */
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.internship-duration, .internship-domain {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.internship-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.internship-list li {
+    font-size: 14px;
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.internship-list li::before {
+    content: "✔"; /* Checkmark for bullet points */
+    position: absolute;
+    left: 0;
+    color: #00ffcc;
+    font-weight: bold;
 }

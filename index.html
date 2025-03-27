@@ -1,132 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tanmay's Portfolio Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/5ed68d2014.js" crossorigin="anonymous"></script>
-</head>
-<body>
-
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/5ed68d2014.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <!-- HEADER SECTION -->
     <header id="header">
-        <div class="container">
-            <nav>
-                <img src="Photos/image.png" class="logo" alt="Logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-text">
-                <p>Software Engineering Student</p>
-                <h1>Hi! I am <span>Tanmay</span><br>From KIIT.</h1>
-            </div>
+      <div class="container">
+        <nav>
+          <img src="Photos/image.png" class="logo" alt="Logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Resume & Skills</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <h2>Welcome to my Portfolio.<br></h2>
+          <h1>Hi!</h1> <h2>I am <span>Tanmay</span>
+          <br /> <span id="typing-text">
+          </span>
+          <span class="cursor">|</span></h1>
+        </h2>
         </div>
+      </div>
     </header>
 
     <!-- ABOUT ME SECTION -->
     <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="Photos/mn.png" alt="Profile Image">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me </h1>
-                    <br>
-                    <p>Here is a section about me where text needs to be added.</p>
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="Photos/mn.png" alt="Profile Image" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <br />
+            <p>I am a passionate software engineer with a keen interest in web
+                development and machine learning. I love to create innovative
+                solutions that make a difference.</p>
 
-                    <!-- TABS -->
-                    <div class="tabs">
-                        <button class="tab-link active" onclick="openTab(event, 'skills')">Skills</button>
-                        <button class="tab-link" onclick="openTab(event, 'experience')">Internship</button>
-                        <button class="tab-link" onclick="openTab(event, 'education')">Education</button>
-                    </div>
-
-                    <!-- TAB CONTENT -->
-                    <div id="skills" class="tab-content active">
-                        <h3>1. UI/UX</h3>
-                        <br>
-                        <p>Designing Web/App interfaces</p>
-                        <br>
-                        <h3>2. Web Development</h3>
-                        <br>
-                        <p>Web App Development</p>
-                        <br>
-                        <h3>3. App Development</h3>
-                        <br>
-                        <p>Building Android/iOS apps</p>
-                        <br>
-                    </div>
-
-                    <div id="experience" class="tab-content">
-                        <h3>Software Engineer</h3>
-                        <br>
-                        <p>Worked on full-stack development</p>
-                        <br>
-                        <h3>Freelancer</h3>
-                        <br>
-                        <p>Designed multiple web projects</p>
-                        <br>
-                    </div>
-
-                    <div id="education" class="tab-content">
-                        <h3>Bachelor's in Computer Science</h3>
-                        <br>
-                        <p>XYZ University, 2019 - 2023</p>
-                        <br>
-                        <h3>High School</h3>
-                        <br>
-                        <p>ABC School, 2017 - 2019</p>
-                        <br>
-                    </div>
-                </div>
+            <!-- TABS -->
+            <div class="tabs-about">
+              <button
+                class="tab-link active"
+                onclick="openTab(event, 'skills')"
+              >
+                Skills
+              </button>
+              <button class="tab-link" onclick="openTab(event, 'experience')">
+                Internship
+              </button>
+              <button class="tab-link" onclick="openTab(event, 'education')">
+                Education
+              </button>
             </div>
+
+            <!-- TAB CONTENT -->
+            <div id="skills" class="tab-content active">
+              <ul class="skills-list">
+                <li>
+                  <strong>Machine Learning:</strong> <br />Designing, training,
+                  and deploying advanced ML models for predictive analytics,
+                  automation, and decision-making.
+                </li>
+                <li>
+                  <strong>Front-End Development:</strong> <br />Building
+                  interactive and visually appealing user interfaces using
+                  React, Vue, and modern web technologies.
+                </li>
+                <li>
+                  <strong>Back-End Development:</strong> <br />Developing robust
+                  and scalable server-side applications using Node.js,
+                  Express.js, and databases.
+                </li>
+                <li>
+                  <strong>Artificial Intelligence:</strong> <br />Working with
+                  AI-powered solutions, NLP, and deep learning applications.
+                </li>
+                <li>
+                  <strong>DevOps & Cloud Computing:</strong> <br />Managing
+                  CI/CD pipelines, cloud deployments, and scalable
+                  infrastructure.
+                </li>
+              </ul>
+            </div>
+            <div id="experience" class="tab-content">
+            <div class="internship-container">
+                <h3 class="internship-title">Research Intern – CSIR</h3>
+                <p class="internship-duration"><strong>Duration:</strong> 2 Months</p>
+                <p class="internship-domain"><strong>Domain:</strong> Machine Learning / Data Science</p>
+                <ul class="internship-list">
+                    <li>Worked on <strong>Rainfall prediction model</strong> focusing on <strong>analyzing weather patterns and predicting rainfall using machine learning algorithms</strong>.</li>
+                    <li>Implemented <strong>Python, Pandas, and Scikit-learn</strong> for <strong>data preprocessing, feature engineering, and model training</strong>.</li>
+                    <li>Conducted research on <strong>data-driven insights and predictive modeling</strong>, contributing to <strong>internal reports and actionable recommendations</strong>.</li>
+                    <li>Collaborated with scientists and researchers to analyze data and optimize performance for <strong>climate-based applications</strong>.</li>
+
+                </ul>
+            </div>
+            </div>
+
+            <div id="education" class="tab-content"></div>
+              <h3>Bachelor's in Computer Science</h3>
+              <br />
+              <p>XYZ University, 2019 - 2023</p>
+              <br />
+              <h3>High School</h3>
+              <br />
+              <p>ABC School, 2017 - 2019</p>
+              <br />
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- PROJECTS SECTION -->
     <section id="projects">
-        <div class="container">
-            <h1 class="sub-title">My Projects <br><br></h1>
-            <div class="project-list">
-                <div class="project">
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Project 1</h2>
-                    <p>Project 1 description</p>
-                    <a href="#" class="button">View Project</a>
-                </div>
-                <div class="project">
-                    <i class="fa-solid fa-desktop"></i>
-                    <h2>Project 2</h2>
-                    <p>Project 2 description</p>
-                    <a href="#" class="button">View Project</a>
-                </div>
-                <div class="project">
-                    <i class="fa-brands fa-aws"></i>
-                    <h2>Project 3</h2>
-                    <p>Project 3 description</p>
-                    <a href="#" class="button">View Project</a>
-                </div>
-            </div>
+      <div class="container">
+        <h1 class="sub-title">My Projects <br /><br /></h1>
+        <div class="project-list">
+          <div class="project">
+            <i class="fa-solid fa-code"></i>
+            <h2>Project 1</h2>
+            <p>Project 1 description</p>
+            <a href="#" class="button">View Project</a>
+          </div>
+          <div class="project">
+            <i class="fa-solid fa-desktop"></i>
+            <h2>Project 2</h2>
+            <p>Project 2 description</p>
+            <a href="#" class="button">View Project</a>
+          </div>
+          <div class="project">
+            <i class="fa-brands fa-aws"></i>
+            <h2>Project 3</h2>
+            <p>Project 3 description</p>
+            <a href="#" class="button">View Project</a>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- DOWNLOAD RESUME SECTION -->
     <section id="download-resume">
-        <div class="container">
-            <h1 class="sub-title">Download My Resume</h1>
-            <p>Get a detailed overview of my skills, experience, and education in my resume. Click the button below to download it.</p>
-            <a href="Portfolio_FrontEnd\Files\Tanmay_Resume (3).pdf" class="button" download>Download Resume</a>
-        </div>
+      <div class="container">
+        <h1 class="sub-title">Download My Resume</h1>
+        <p>
+          Get a detailed overview of my skills, experience, and education in my
+          resume. Click the button below to download it.
+        </p>
+        <a
+          href="Portfolio_FrontEnd/Files/Tanmay_Resume (3).pdf"
+          class="button"
+          download
+          >Download Resume</a
+        >
+        <button class="button" id="view-skills-btn">View Skills</button>
+      </div>
     </section>
 
+    <!-- SKILLS MODAL -->
+    <div id="skills-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>My Technical Skills</h2>
+
+        <!-- Tabs Navigation -->
+        <div class="tabs">
+          <button class="tab-button active" data-tab="languages">
+            Languages
+          </button>
+          <button class="tab-button" data-tab="tools">Tools & Platforms</button>
+          <button class="tab-button" data-tab="frameworks">
+            Libraries & Frameworks
+          </button>
+          <button class="tab-button" data-tab="databases">
+            Databases & DevOps
+          </button>
+          <button class="tab-button" data-tab="courses">Course Subjects</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content active" id="languages">
+          <ul>
+            <li>Python <span class="rating">★★★★★</span></li>
+            <li>JavaScript <span class="rating">★★★★☆</span></li>
+            <li>Java <span class="rating">★★★★☆</span></li>
+            <li>C++ <span class="rating">★★★☆☆</span></li>
+            <li>SQL <span class="rating">★★★★☆</span></li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="tools">
+          <ul>
+            <li>Git & GitHub <span class="rating">★★★★★</span></li>
+            <li>VS Code <span class="rating">★★★★☆</span></li>
+            <li>Linux & Shell Scripting <span class="rating">★★★☆☆</span></li>
+            <li>Postman <span class="rating">★★★★☆</span></li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="frameworks">
+          <ul>
+            <li>ReactJS <span class="rating">★★★★☆</span></li>
+            <li>Express.js <span class="rating">★★★★☆</span></li>
+            <li>Node.js <span class="rating">★★★★☆</span></li>
+            <li>Flask <span class="rating">★★★☆☆</span></li>
+            <li>Bootstrap <span class="rating">★★★★☆</span></li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="databases">
+          <ul>
+            <li>MongoDB <span class="rating">★★★★☆</span></li>
+            <li>MySQL <span class="rating">★★★★☆</span></li>
+            <li>Firebase <span class="rating">★★★☆☆</span></li>
+            <li>AWS Basics <span class="rating">★★★☆☆</span></li>
+            <li>Docker <span class="rating">★★★☆☆</span></li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="courses">
+          <ul>
+            <li>
+              Data Structures & Algorithms <span class="rating">★★★★★</span>
+            </li>
+            <li>Operating Systems <span class="rating">★★★★☆</span></li>
+            <li>Computer Networks <span class="rating">★★★★☆</span></li>
+            <li>
+              Database Management Systems <span class="rating">★★★★☆</span>
+            </li>
+            <li>Machine Learning <span class="rating">★★★☆☆</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
